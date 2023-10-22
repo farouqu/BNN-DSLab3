@@ -1,0 +1,5 @@
+venv/
+
+datasets/
+output/3QConv/models/
+output/XNOR/models/
