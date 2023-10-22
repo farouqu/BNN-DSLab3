@@ -1,30 +1,32 @@
 # Binarized Neural Network
 
+## Introduction
+This is an unofficial implementation of the Binarized Neural Network for Traffic Sign Recognition [Architecturing Binarized Neural Networks for Traffic Sign Recognition](https://arxiv.org/pdf/2303.15005v1.pdf).
+
+Original code credits goes to the authors. Minor modifications have been carried out to reproduce the results.
+
 ## Summary
 This work presents a bottom-up approach for architecturing BNNs by studying characteristics of the constituent layers. These constituent layers (binarized convolutional layers, max pooling, batch normalization, fully connected layers) are studied in various combinations and with different values of kernel size, number of filters and of neurons by using the German Traffic Sign Recognition Benchmark (GTSRB) for training. As a result, we propose BNNs architectures which achieve more than 90% for GTSRB (the maximum is 96.45%) and an average greater than 80% (the maximum is 88.99%) considering also the Belgian and Chinese datasets for testing. The number of parameters of these architectures varies from 100k to less than 2M.
 
 ## Requirements
-You have to install:
-- Tensorflow
-```
-pip install tensorflow==2.10.0
-```
-- Keras
-```
-pip install keras==2.10.0
-```
-- Larq
-```
-pip install larq==0.12.2
-```
+
+The repository depends on tensorflow >= 2.13.0 and keras >= 2.13.1
+
+Clone the repostitory and install all dependencies:
+``` pip install -r requirements.txt ```
+
+## Environment
+
+The experiment was conducted on using tensorflow binaries for MacOS on a MacBook Pro with M1 (16GB RAM).
 
 
 ## Datasets
+
 - [GTSRB](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign?datasetId=82373&language=Python)
 - [Belgium](https://www.kaggle.com/datasets/shazaelmorsh/trafficsigns)
 - [Chinese](https://www.kaggle.com/datasets/dmitryyemelyanov/chinese-traffic-signs)
 
-However, for Belgium and Chinese datasets we have to modify the order of the classes in order to correspond to the **GTSRB** dataset. You can download the datasets from the [drive](https://drive.google.com/drive/folders/1OMHjWpLJ9DnLBfSyTKLJ-fFLOzsNI9Qh).
+However, for Belgium and Chinese datasets, modification of the classes was carried out to correspond to the **GTSRB** dataset. You can download the datasets from the [drive](https://drive.google.com/drive/folders/1OMHjWpLJ9DnLBfSyTKLJ-fFLOzsNI9Qh).
 
 In the workspace you should have following folders:
 - datasets
