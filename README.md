@@ -1,11 +1,13 @@
 # Binarized Neural Network
 
 ## Introduction
-This is an unofficial implementation of the Binarized Neural Network for Traffic Sign Recognition [Architecturing Binarized Neural Networks for Traffic Sign Recognition](https://arxiv.org/pdf/2303.15005v1.pdf).
+
+This is an unofficial implementation of [Architecturing Binarized Neural Networks for Traffic Sign Recognition](https://arxiv.org/pdf/2303.15005v1.pdf).
 
 Original code credits goes to the authors. Minor modifications have been carried out to reproduce the results.
 
 ## Summary
+
 This work presents a bottom-up approach for architecturing BNNs by studying characteristics of the constituent layers. These constituent layers (binarized convolutional layers, max pooling, batch normalization, fully connected layers) are studied in various combinations and with different values of kernel size, number of filters and of neurons by using the German Traffic Sign Recognition Benchmark (GTSRB) for training. As a result, we propose BNNs architectures which achieve more than 90% for GTSRB (the maximum is 96.45%) and an average greater than 80% (the maximum is 88.99%) considering also the Belgian and Chinese datasets for testing. The number of parameters of these architectures varies from 100k to less than 2M.
 
 ## Requirements
@@ -36,6 +38,7 @@ In the workspace you should have following folders:
 
 
 ## How to run the training scripts
+
 Depending on which architecture you want to train, you can choose to run a certain script:
   - [xnor.py](https://github.com/apostovan21/BinarizedNeuralNetwork/blob/master/src/xnor.py)
   - [3QConv.py](https://github.com/apostovan21/BinarizedNeuralNetwork/blob/master/src/3QConv.py)
@@ -84,6 +87,7 @@ Each script has some constants defined which you can change according to the tra
 At the end of each script there is the `main` code which calls the functions for training. If you don't want to train all variations of architectures, you can comment a certain training.
 
 ## How to run the predition scripts
+
 First make sure you have run the training for desire architecture and you have the model and training summary saved.
 Next, edit the constants from [predition.py](https://github.com/apostovan21/BinarizedNeuralNetwork/blob/master/src/prediction.py):
 
